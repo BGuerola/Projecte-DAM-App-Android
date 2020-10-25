@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SeniorTalentJobs</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SENIOR TALENT JOBS</string>
+    <string name="nav_header_subtitle">jobsenior@seniortalent.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ajustes</string>
+
+    <string name="menu_buscarofertas">Buscar Ofertas</string>
+    <string name="menu_candidaturas">Candidaturas</string>
+    <string name="menu_alertas">Alertas</string>
+    <string name="menu_notificaciones">Notificaciones</string>
+    <string name="menu_ofertasfavoritas">Ofertas Favoritas</string>
+    <string name="menu_mensajes">Mensajes</string>
+    <string name="menu_micv">Mi CV</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_oferta">Oferta de trabajo</string>
+    <string name="title_activity_proves_my_s_q_l">ProvesMySQLActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="action_sign_in_short">Accion_sign_in</string>
+    <string name="loginprueba">water</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF3D00</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#A19797</color>
+    <color name="aqua">#76D7C4</color>
+    <color name="taronja">#FFC400</color>
+    <color name="fons">#11FFC400</color>
+</resources>

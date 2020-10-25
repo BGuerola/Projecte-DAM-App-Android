@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/cndlogoempresa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:paddingLeft="7sp"
+        android:paddingRight="7sp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/cndpuesto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puesto"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/cndempresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empresa"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/cndfechaoferta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fecha Oferta" />
+
+            <TextView
+                android:id="@+id/cndestado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="40sp"
+                android:text="Estado" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/cndsalario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salario" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

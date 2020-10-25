@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_buscarofertas">
+
+    <fragment
+        android:id="@+id/nav_buscarofertas"
+        android:name="com.example.seniortalentjobs.ui.buscarOfertes.BuscarOfertesFragment"
+        android:label="@string/menu_buscarofertas"
+        tools:layout="@layout/fragment_buscarofertas" />
+
+    <fragment
+        android:id="@+id/nav_candidaturas"
+        android:name="com.example.seniortalentjobs.ui.candidaturas.CandidaturasFragment"
+        android:label="@string/menu_candidaturas"
+        tools:layout="@layout/fragment_candidaturas" />
+
+    <fragment
+        android:id="@+id/nav_alertas"
+        android:name="com.example.seniortalentjobs.ui.alertas.AlertasFragment"
+        android:label="@string/menu_alertas"
+        tools:layout="@layout/fragment_alertas" />
+
+    <fragment
+        android:id="@+id/nav_notificaciones"
+        android:name="com.example.seniortalentjobs.ui.notificaciones.NotificacionesFragment"
+        android:label="@string/menu_notificaciones"
+        tools:layout="@layout/fragment_notificaciones" />
+
+    <fragment
+        android:id="@+id/nav_ofertasfavoritas"
+        android:name="com.example.seniortalentjobs.ui.ofertasFavoritas.OfertasFavoritasFragment"
+        android:label="@string/menu_ofertasfavoritas"
+        tools:layout="@layout/fragment_ofertasfavoritas" />
+
+    <fragment
+        android:id="@+id/nav_mensajes"
+        android:name="com.example.seniortalentjobs.ui.mensajes.MensajesFragment"
+        android:label="@string/menu_mensajes"
+        tools:layout="@layout/fragment_mensajes" />
+
+    <fragment
+        android:id="@+id/nav_micv"
+        android:name="com.example.seniortalentjobs.ui.miCV.MiCVFragment"
+        android:label="@string/menu_micv"
+        tools:layout="@layout/fragment_micv" />
+</navigation>
