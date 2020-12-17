@@ -87,7 +87,7 @@ public class CandidaturasFragment extends Fragment {
         ArrayList<BuscarOfertes> buscarOfertes = new ArrayList<BuscarOfertes>();
         for (int i=0; i<3; i++) {
 // Create a writer object
-            BuscarOfertes aux = new BuscarOfertes(writersPhoto[i], puesto[i], empresa[i], fechaPublicacion[i], ubicacion[i], estado[i], salario[i]);
+            BuscarOfertes aux = new BuscarOfertes(writersPhoto[i], puesto[i], empresa[i], fechaPublicacion[i], ubicacion[i], salario[i]);
 // Add to the ArrayList
             buscarOfertes.add(aux);
         }

@@ -2,6 +2,8 @@
   <dictionary name="bernat">
     <words>
       <w>datos</w>
+      <w>fout</w>
+      <w>guardar</w>
     </words>
   </dictionary>
 </component>

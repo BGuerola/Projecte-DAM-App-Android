@@ -1,16 +1,16 @@
 package com.example.seniortalentjobs;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
+import android.view.MenuItem;
 import android.view.Menu;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.seniortalentjobs.adapters.BuscarOfertesAdapter;
-import com.example.seniortalentjobs.entities.BuscarOfertes;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.seniortalentjobs.dao.DaoRetrofitMetodos;
+import com.example.seniortalentjobs.utilidades.Commons;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -24,10 +24,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
     private AppBarConfiguration mAppBarConfiguration;
+    DaoRetrofitMetodos provesRetrofit = new DaoRetrofitMetodos();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +34,19 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
-/*        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Buscar ofertes", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        SharedPreferences prefs = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        String b = prefs.getString("email", "No existe información");
+        //navigationView.setNavigationItemSelectedListener();
+        ImageView fotousuario= (ImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
+        TextView txtV_Username = (TextView) navigationView.getHeaderView(0).findViewById(R.id.tituloheader);
+        TextView txtV_Email = (TextView) navigationView.getHeaderView(0).findViewById(R.id.subtituloheader);
+        fotousuario.setImageResource(R.drawable.logohorizontal);
+        txtV_Username.setText(Commons.nomUsuari);
+        txtV_Email.setText(b);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -72,5 +71,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void tornaraAutenticacio(MenuItem item) {
+        Intent intent = new Intent(this, AutenticacioActivity.class);
+        startActivity(intent);
     }
 }

@@ -59,7 +59,7 @@ tools:context=".ui.mensajes.MensajesFragment">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="Proves"
-        android:text="PROVES MYSQL" />
+        android:text="GESTIÓN DE LOS MENSAJES" />
 </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

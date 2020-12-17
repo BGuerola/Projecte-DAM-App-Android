@@ -36,14 +36,12 @@ public class CandidaturesAdapter extends ArrayAdapter{
         TextView puesto = convertView.findViewById(R.id.cndpuesto);
         TextView empresa = convertView.findViewById(R.id.cndempresa);
         TextView fechaPublicacion = convertView.findViewById(R.id.cndfechaoferta);
-        TextView estado = convertView.findViewById(R.id.cndestado);
         TextView salario = convertView.findViewById(R.id.cndsalario);
 // Populate the data into the template view using the data object
         logoEmpresa.setImageResource(buscarOfertes.getLogoEmpresa());
         puesto.setText(buscarOfertes.getPuesto());
         empresa.setText(buscarOfertes.getEmpresa());
         fechaPublicacion.setText(buscarOfertes.getFechaPublicacion());
-        estado.setText(buscarOfertes.getEstado());
         salario.setText(buscarOfertes.getSalario());
 // Return the completed view to render on screen
         return convertView;

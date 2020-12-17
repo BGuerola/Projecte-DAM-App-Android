@@ -11,13 +11,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editmensajes"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="ID Mensajes" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editmensajes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ID Mensajes" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:onClick="OnclickConsultarMensajes"
+                android:text="CONSULTAR MENSAJE" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editidempresa"
@@ -26,14 +42,6 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="ID empresa" />
-
-        <EditText
-            android:id="@+id/editnomempresa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Empresa" />
 
         <EditText
             android:id="@+id/editidcandidatos"
@@ -56,24 +64,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
             android:text="Missatges" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
             android:layout_weight="1"
             android:onClick="Onclick"
-            android:text="CREAR MISSATGE" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="OnclickConsultarMensajes"
-            android:text="CONSULTAR MISSATGE" />
+            android:text="CREAR MENSAJE" />
 
         <Button
             android:id="@+id/button9"
@@ -81,6 +83,14 @@
             android:layout_height="wrap_content"
             android:onClick="OnclickActualizarMensajes"
             android:text="Actualizar mensajes" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OnclickEliminarMensaje"
+            android:text="ELIMINAR MENSAJE" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

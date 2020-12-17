@@ -1,12 +1,12 @@
 package com.example.seniortalentjobs.entities;
 
 public class Usuari {
-    public String usuari, contrasenya, email;
+    public String usuari, email, contrasenya;
 
-    public Usuari(String usuari, String contrasenya, String email) {
+    public Usuari(String usuari, String email, String contrasenya) {
         this.usuari = usuari;
-        this.contrasenya = contrasenya;
         this.email = email;
+        this.contrasenya = contrasenya;
     }
 
     public String getUsuari() {

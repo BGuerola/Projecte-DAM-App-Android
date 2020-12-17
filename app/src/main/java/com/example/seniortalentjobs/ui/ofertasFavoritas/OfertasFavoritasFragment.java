@@ -15,20 +15,28 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.seniortalentjobs.utilidades.Commons;
 import com.example.seniortalentjobs.OfertaActivity;
 import com.example.seniortalentjobs.R;
-import com.example.seniortalentjobs.adapters.BuscarOfertesAdapter;
 import com.example.seniortalentjobs.adapters.FavoritosAdapter;
 import com.example.seniortalentjobs.entities.BuscarOfertes;
-import com.example.seniortalentjobs.ui.buscarOfertes.BuscarOfertesViewModel;
+import com.example.seniortalentjobs.entities.OfertaProvisional;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class OfertasFavoritasFragment extends Fragment {
 
+    FileInputStream fitxerentrada=null;
+    public List<OfertaProvisional> listaFavoritos= new ArrayList<>();
+
     //String puesto, empresa, fechaPublicacion, ubicacion, salario;
     private ListView listview;
-    private int[] writersPhoto={R.drawable.bernat,R.drawable.bernat,R.drawable.bernat};
+    private int[] writersPhoto={R.drawable.logo_senior_talent,R.drawable.logo_senior_talent,R.drawable.logo_senior_talent};
     private String[] puesto={"Electromecánico", "Operario", "Comercial CSC"};
     private String[] empresa = {"Mercadona", "Velarte", "Mr. Jeff"};
     private String[] fechaPublicacion = {"1 de Enero de 2020", "6/06/2020", "7 de Abril"};
@@ -62,7 +70,7 @@ public class OfertasFavoritasFragment extends Fragment {
         ArrayList<BuscarOfertes> ofertesFavorites = new ArrayList<BuscarOfertes>();
         for (int i=0; i<3; i++) {
 // Create a writer object
-            BuscarOfertes aux = new BuscarOfertes(writersPhoto[i], puesto[i], empresa[i], fechaPublicacion[i], ubicacion[i], estado[i], salario[i]);
+            BuscarOfertes aux = new BuscarOfertes(writersPhoto[i], puesto[i], empresa[i], fechaPublicacion[i], ubicacion[i], salario[i]);
 // Add to the ArrayList
             ofertesFavorites.add(aux);
         }
@@ -77,6 +85,21 @@ public class OfertasFavoritasFragment extends Fragment {
                 startActivityForResult(intent, 0);
             }
         });
+    }
+
+    public List<OfertaProvisional> llegirtxt(){
+
+        try {
+            fitxerentrada=new FileInputStream(Commons.getFitxer);
+            ObjectInputStream tubEntrada=new ObjectInputStream(fitxerentrada);
+            listaFavoritos= (List<OfertaProvisional>) tubEntrada.readObject();
+
+        }catch(FileNotFoundException ex){
+            ex.printStackTrace();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return listaFavoritos;
     }
 
 }

@@ -20,18 +20,35 @@
         app:navGraph="@navigation/mobile_navigation" />-->
 
 
-
-
-        <fragment
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/mobile_navigation" />
+            android:orientation="vertical">
+
+
+
+                <fragment
+                    android:id="@+id/nav_host_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:defaultNavHost="true"
+                    app:navGraph="@navigation/mobile_navigation" />
+
+
+
+<!--                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnfloatbuscarofertes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:clickable="true"
+                    android:onClick="BusquedaOfertes"
+                    app:backgroundTint="@color/fons"
+                    app:maxImageSize="64sp"
+                    app:srcCompat="@drawable/lupa" />-->
+        </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@ package com.example.seniortalentjobs.entities;
 
 public class BuscarOfertes {
     Integer logoEmpresa;
-    String puesto, empresa, fechaPublicacion, ubicacion, estado, salario;
+    String puesto, empresa, fechaPublicacion, ubicacion, salario;
 
     public Integer getLogoEmpresa() {
         return logoEmpresa;
@@ -35,15 +35,6 @@ public class BuscarOfertes {
     public void setFechaPublicacion(String fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public String getUbicacion() {
         return ubicacion;
     }
@@ -68,18 +59,16 @@ public class BuscarOfertes {
                 ", empresa='" + empresa + '\'' +
                 ", fechaPublicacion='" + fechaPublicacion + '\'' +
                 ", ubicacion='" + ubicacion + '\'' +
-                ", estado='" + estado + '\'' +
                 ", salario='" + salario + '\'' +
                 '}';
     }
 
-    public BuscarOfertes(Integer logoEmpresa, String puesto, String empresa, String fechaPublicacion, String ubicacion, String estado, String salario) {
+    public BuscarOfertes(Integer logoEmpresa, String puesto, String empresa, String fechaPublicacion, String ubicacion, String salario) {
         this.logoEmpresa = logoEmpresa;
         this.puesto = puesto;
         this.empresa = empresa;
         this.fechaPublicacion = fechaPublicacion;
         this.ubicacion = ubicacion;
-        this.estado=estado;
         this.salario = salario;
 
 

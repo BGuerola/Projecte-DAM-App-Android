@@ -5,7 +5,7 @@
     <string name="nav_header_title">SENIOR TALENT JOBS</string>
     <string name="nav_header_subtitle">jobsenior@seniortalent.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Ajustes</string>
+    <string name="action_settings">Log in</string>
 
     <string name="menu_buscarofertas">Buscar Ofertas</string>
     <string name="menu_candidaturas">Candidaturas</string>
@@ -19,7 +19,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="title_activity_oferta">Oferta de trabajo</string>
-    <string name="title_activity_proves_my_s_q_l">ProvesMySQLActivity</string>
+    <string name="title_activity_proves_my_s_q_l">Mensajes</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">SIGN IN</string>

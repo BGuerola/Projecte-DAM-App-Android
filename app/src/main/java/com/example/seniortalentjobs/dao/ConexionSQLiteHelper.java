@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.seniortalentjobs.utilidades.Utilidades;
+import com.example.seniortalentjobs.utilidades.Commons;
 
 public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
@@ -16,16 +16,20 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.CREAR_TABLA_USUARIO);
-        //Ací crear taula ofertes
+        db.execSQL(Commons.CREAR_TABLA_USUARIO);
+    }
 
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS Usuario");
-        //ací també la taula ofertes
+        db.execSQL("DROP TABLE IF EXISTS Mensajes");
         onCreate(db);
+
+
 
     }
 }
